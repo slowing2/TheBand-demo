@@ -41,6 +41,10 @@ html{
     margin-top: 16px !important;
 }
 
+.mt-32{
+    margin-top: 32px;
+}
+
 .col{
     float: left;
     padding-left: 8px;
@@ -80,7 +84,8 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
-
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .pull-right{
@@ -152,22 +157,40 @@ html{
 #nav .subnav a{
     padding: 0 16px;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
-    color: white;
-    line-height: 46px;
     padding: 0 21px;
-    cursor: pointer;
+    
+}
+
+#header .menu-icon,
+#header .fas{
+    line-height: 46px;
+    color: white;
+    font-size: 20px;
 }
 
 #header .search-btn:hover{
+    cursor: pointer;
     background-color: #ff4433;
 }
-
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
 #slider{
     margin-top: 46px;
-    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+    background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
     padding-top: 50%;
     position: relative;
 }
@@ -178,6 +201,7 @@ html{
     color: white;
     text-align: center;
     width: 100%;
+    text-shadow: 0 0 1px #000;
 }
 
 #slider .text-heading{
@@ -192,10 +216,12 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
-    
+    padding-left: 16px;
+    padding-right: 16px;
     
 }
 
@@ -221,7 +247,7 @@ html{
 }
 
 #content .member-list{
-    padding-top: 47px;
+    padding-top: 32px;
 }
 
 #content .member-img{
@@ -273,7 +299,7 @@ html{
 
 /* place */
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-item{
@@ -363,10 +389,14 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 4px;
 }
 
 .modal .modal-ic{
     margin-right: 16px;
+    font-size: 30px;
 }
 
 .modal-body{
@@ -375,7 +405,7 @@ html{
 .modal-label{
     display: block;
     font-size: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 12px;ss
 }
 
 .modal-input{
@@ -431,7 +461,13 @@ html{
     display: inline-block;
 
 }
-
+.contact-info a{
+    color: #101aef;
+    opacity: 0.7;
+}
+.contact-info a:hover{
+    opacity: 1;
+}
 .contact-form{
     font-size: 15px;
 }
@@ -460,6 +496,7 @@ html{
 #footer .socials-list a{
     color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
+    padding: 0px 4px;
 }
 
 #footer .socials-list a:hover,
